@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#57CDDC39"
-    android:backgroundTint="#CDDC39"
+    android:background="#FFFFFF"
+    android:backgroundTint="#57A5F1D0"
     tools:context=".SignUpActivity">
 
     <LinearLayout
@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-                android:textColor="#CDDC39" />
+                android:textColor="#C43BC59E" />
 
             <EditText
                 android:id="@+id/etFirstName"
@@ -39,7 +39,7 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etLastNAme"
+                android:id="@+id/etLastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -102,7 +102,7 @@
                 android:id="@+id/Savebtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#C4CDDC39"
+                android:backgroundTint="#C43BC59E"
                 android:text="Save"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#000000" />

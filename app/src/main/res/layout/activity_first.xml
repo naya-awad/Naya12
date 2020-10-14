@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:backgroundTint="#57CDDC39"
+    android:backgroundTint="#57A5F1D0"
     tools:context=".FirstActivity">
 
 
@@ -24,27 +24,31 @@
             android:textSize="100sp"
             android:typeface="monospace" />
 
+
         <ImageView
-            android:layout_width="329dp"
+            android:id="@+id/thinkimg"
+            android:layout_width="wrap_content"
             android:layout_height="419dp"
             android:hapticFeedbackEnabled="false"
-            android:src="@drawable/family_pet" />
+            android:src="@drawable/thinkingman" />
 
         <Button
             android:id="@+id/SignInBtn"
             android:layout_width="223dp"
             android:layout_height="89dp"
-            android:backgroundTint="#C4CDDC39"
+            android:backgroundTint="#C43BC59E"
             android:text="Sign In"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000000" />
 
         <Button
             android:id="@+id/SignUpBtn"
             android:layout_width="223dp"
             android:layout_height="89dp"
-            android:backgroundTint="#C4CDDC39"
+            android:backgroundTint="#C43BC59E"
             android:text="Sign Up"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000000" />
 
     </LinearLayout>
 
