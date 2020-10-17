@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:text="Sign Up"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-                android:textColor="#C43BC59E" />
+                android:textColor="#000000" />
 
             <EditText
                 android:id="@+id/etFirstName"

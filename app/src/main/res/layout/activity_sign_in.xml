@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:text="Sign In"
             android:textAppearance="@style/TextAppearance.AppCompat.Display4"
-            android:textColor="#C43BC59E" />
+            android:textColor="#000000" />
     </LinearLayout>
 
     <LinearLayout
