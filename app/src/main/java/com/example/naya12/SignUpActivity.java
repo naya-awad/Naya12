@@ -2,7 +2,6 @@ package com.example.naya12;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 public class SignUpActivity extends AppCompatActivity {
 
     private TextView SignUptxt;
-    private EditText etFirstName,etLastName,etPassword,etVerPassword,etEmail,etPhone;
+    private EditText etFirstName,etLastName,etUserName,etPassword,etVerPassword,etEmail,etPhone;
     private Button Savebtn;
 
     @Override
@@ -22,6 +21,7 @@ public class SignUpActivity extends AppCompatActivity {
         SignUptxt=findViewById(R.id.SignUptxt);
         etFirstName=findViewById(R.id.etFirstName);
         etLastName=findViewById(R.id.etLastName);
+        etUserName=findViewById(R.id.etUserName);
         etPassword=findViewById(R.id.etPassword);
         etVerPassword=findViewById(R.id.etVerPassword);
         etEmail=findViewById(R.id.etEmail);

@@ -15,7 +15,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/LostTitle"
+            android:id="@+id/LostTitletxt"
             android:layout_width="244dp"
             android:layout_height="123dp"
             android:drawableTint="@color/colorPrimary"
@@ -33,7 +33,7 @@
             android:src="@drawable/thinkingman" />
 
         <Button
-            android:id="@+id/SignInBtn"
+            android:id="@+id/LogInbtn"
             android:layout_width="223dp"
             android:layout_height="89dp"
             android:backgroundTint="#C43BC59E"
@@ -42,7 +42,7 @@
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/SignUpBtn"
+            android:id="@+id/SignUpbtn"
             android:layout_width="223dp"
             android:layout_height="89dp"
             android:backgroundTint="#C43BC59E"

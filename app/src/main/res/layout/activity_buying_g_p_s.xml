@@ -39,7 +39,7 @@
             android:src="@drawable/GPSBlueBackground" />
 
         <TextView
-            android:id="@+id/calltxt"
+            android:id="@+id/Calltxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="call:"
@@ -47,7 +47,7 @@
             android:textColor="#000000" />
 
         <Button
-            android:id="@+id/phonecallbtn"
+            android:id="@+id/PhoneCallbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="#C43BC59E"
