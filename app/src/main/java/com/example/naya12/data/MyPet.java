@@ -1,10 +1,10 @@
-package com.example.naya12;
+package com.example.naya12.data;
 
-public class Pet
+public class MyPet
 {
     private String namePet;
     private String codeGPSPet;
-    public Pet(String name, String codeGPS)
+    public MyPet(String name, String codeGPS)
     {
         this.namePet=namePet;
         this.codeGPSPet=codeGPSPet;
@@ -27,6 +27,6 @@ public class Pet
     }
     public void addPet(String name1, String codeGPS1)
     {
-        Pet person=new Pet(name1,codeGPS1);
+        MyPet person=new MyPet(name1,codeGPS1);
     }
 }

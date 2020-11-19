@@ -1,4 +1,4 @@
-package com.example.naya12;
+package com.example.naya12.MyUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.naya12.R;
 
 public abstract class BuyingGPS extends AppCompatActivity {
 

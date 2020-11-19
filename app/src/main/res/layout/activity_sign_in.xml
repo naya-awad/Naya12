@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="#57A5F1D0"
-    tools:context=".SignInActivity">
+    tools:context=".MyUI.SignInActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,6 +21,7 @@
             android:text="Sign In"
             android:textAppearance="@style/TextAppearance.AppCompat.Display4"
             android:textColor="#000000" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -30,16 +31,16 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/etUserName"
+            android:id="@+id/etEmailIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="User Name"
-            android:inputType="textPersonName"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <EditText
-            android:id="@+id/etPassword"
+            android:id="@+id/etPasswordIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -48,11 +49,11 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnForgot"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#00FFFFFF"
-            android:text="Button" />
+            android:text="Forgot Your Password?" />
 
         <Button
             android:id="@+id/LogInbtn"
@@ -62,6 +63,23 @@
             android:text="Log In"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You Don't have a n account! Create one."
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/btnSignUpIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#C43BC59E"
+            android:text="SignUp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
 
     </LinearLayout>
 

@@ -1,11 +1,11 @@
-package com.example.naya12;
+package com.example.naya12.data;
 
-public class Object {
+public class MyObject {
 
     private String nameObject;
     private String codeGPSObject;//String because it can start with 0
 
-    public Object(String name, String codeGPS)
+    public MyObject(String name, String codeGPS)
     {
         this.nameObject=nameObject;
         this.codeGPSObject=codeGPSObject;
@@ -28,6 +28,6 @@ public class Object {
     }
     public void addPerson(String name1, String codeGPS1)
     {
-        Person person=new Person(name1,codeGPS1);
+        MyPerson person=new MyPerson(name1,codeGPS1);
     }
 }

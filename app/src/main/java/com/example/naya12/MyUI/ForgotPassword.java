@@ -1,8 +1,10 @@
-package com.example.naya12;
+package com.example.naya12.MyUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.naya12.R;
 
 public class ForgotPassword extends AppCompatActivity {
 

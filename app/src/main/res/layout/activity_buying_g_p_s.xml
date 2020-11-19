@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="#57A5F1D0"
-    tools:context=".BuyingGPS">
+    tools:context=".MyUI.BuyingGPS">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="400dp"
             android:hapticFeedbackEnabled="false"
-            android:src="@drawable/GPSBlueBackground" />
+            android:src="@drawable/gpsBlueBackground" />
 
         <TextView
             android:id="@+id/Calltxt"

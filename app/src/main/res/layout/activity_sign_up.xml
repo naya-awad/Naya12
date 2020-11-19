@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:backgroundTint="#57A5F1D0"
-    tools:context=".SignUpActivity">
+    tools:context=".MyUI.SignUpActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:textColor="#000000" />
 
             <EditText
-                android:id="@+id/etFirstName"
+                android:id="@+id/etFirstNameUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -39,7 +39,7 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etLastName"
+                android:id="@+id/etLastNameUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -49,17 +49,7 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etUserName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="User Name"
-                android:inputType="textPersonName"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColorHint="#9C9999" />
-
-            <EditText
-                android:id="@+id/etPassword"
+                android:id="@+id/etPasswordIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -69,7 +59,7 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etVerPassword"
+                android:id="@+id/etVerPassUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -79,7 +69,7 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etEmail"
+                android:id="@+id/etEmailIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -89,7 +79,7 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etPhone"
+                android:id="@+id/etPhoneUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -99,7 +89,7 @@
                 android:textColorHint="#9C9999" />
 
             <Button
-                android:id="@+id/Savebtn"
+                android:id="@+id/SavebtnUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#C43BC59E"
