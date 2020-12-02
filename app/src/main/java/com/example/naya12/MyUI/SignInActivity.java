@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.naya12.MyUtils.MyValidation;
 import com.example.naya12.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,7 +34,7 @@ public class SignInActivity extends AppCompatActivity {
         ForgotPassbtn=findViewById(R.id.ForgotPassbtn);
         LogInbtn=findViewById(R.id.LogInbtn);
         txtCreateAccount=findViewById(R.id.txtCreateAccount);
-        btnSignUp=findViewById(R.id.btnSignUp);
+        btnSignUp=findViewById(R.id.btnSignUpIn);
     }
     private void validateForm()
     {
@@ -48,13 +49,13 @@ public class SignInActivity extends AppCompatActivity {
                 ||email.indexOf('.')>=email.length()-1 ||email.lastIndexOf('.')<email.indexOf('@'))//בודק אם האימיל כתוב לא נכון
         {
             isOK=false;
-            etEmail.setError("Wrong E-mail. Try again");
+            etEmailIn.setError("Wrong E-mail. Try again");
         }
 
-        MyValidations myValidation=new MyValidations();
+        MyValidation myValidation=new MyValidation();
         if (myValidation.validatePasword(pass)==false){
             isOK= false;
-            etPassword.setError("Invalid Password");
+            etPasswordIn.setError("Invalid Password");
         }
         if(isOK)// isOk = true
         {
@@ -75,12 +76,11 @@ public class SignInActivity extends AppCompatActivity {
                 else
                 {
                     Toast.makeText(SignInActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-                    etEmail.setError(task.getException().getMessage());
+                    etEmailIn.setError(task.getException().getMessage());
                 }
             }
         });
 
     }
 
-}
 }
