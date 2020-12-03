@@ -1,14 +1,13 @@
 package com.example.naya12.data;
 
-import java.util.Queue;
-
-public class MyPerson<name>
+public class MyPerson<name> extends MyPet
 {
     private String namePerson;
     private String codeGPSPerson;
 
-    public MyPerson(String name, String  codeGPS)
+    public MyPerson(String namePerson, String  codeGPSPerson)
     {
+        super();
         this.namePerson=namePerson;
         this.codeGPSPerson=codeGPSPerson;
     }
@@ -28,11 +27,8 @@ public class MyPerson<name>
     {
         this.codeGPSPerson=codeGPSset;
     }
-    public boolean addPerson(String name1, String codeGPS1)
+    public void addPerson(String name1, String codeGPS1)
     {
-        MyPerson person=new MyPerson(name1,codeGPS1);
-        Queue<MyPerson> q=new Queue<MyPerson>();
-        while ()
 
     }
 
