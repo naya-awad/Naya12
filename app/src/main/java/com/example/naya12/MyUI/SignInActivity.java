@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.naya12.MyUtils.MyValidation;
 import com.example.naya12.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -33,7 +35,27 @@ public class SignInActivity extends AppCompatActivity {
         ForgotPassbtn=findViewById(R.id.ForgotPassbtn);
         LogInbtn=findViewById(R.id.LogInbtn);
         txtCreateAccount=findViewById(R.id.txtCreateAccount);
-        btnSignUp=findViewById(R.id.btnSignUp);
+        btnSignUp=findViewById(R.id.btnSignUpIn);
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(SignInActivity.this, SignUpActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+        LogInbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(SignInActivity.this, AdvertiseActivity.class);
+                startActivity(i);
+
+            }
+        });
+
+
     }
     private void validateForm()
     {
@@ -48,13 +70,12 @@ public class SignInActivity extends AppCompatActivity {
                 ||email.indexOf('.')>=email.length()-1 ||email.lastIndexOf('.')<email.indexOf('@'))//בודק אם האימיל כתוב לא נכון
         {
             isOK=false;
-            etEmail.setError("Wrong E-mail. Try again");
+            etEmailIn.setError("Wrong E-mail. Try again");
         }
 
-        MyValidations myValidation=new MyValidations();
-        if (myValidation.validatePasword(pass)==false){
-            isOK= false;
-            etPassword.setError("Invalid Password");
+        if(pass.length()<8)
+        {
+            etPasswordIn.setError("Invalid Password");
         }
         if(isOK)// isOk = true
         {
@@ -75,12 +96,11 @@ public class SignInActivity extends AppCompatActivity {
                 else
                 {
                     Toast.makeText(SignInActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-                    etEmail.setError(task.getException().getMessage());
+                    etEmailIn.setError(task.getException().getMessage());
                 }
             }
         });
 
     }
 
-}
 }

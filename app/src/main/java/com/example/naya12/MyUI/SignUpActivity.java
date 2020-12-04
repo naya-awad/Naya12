@@ -30,7 +30,6 @@ public class SignUpActivity extends AppCompatActivity {
         SignUptxt = findViewById(R.id.SignUptxt);
         etFirstName = findViewById(R.id.etFirstNameUp);
         etLastName = findViewById(R.id.etLastNameUp);
-        etUserName = findViewById(R.id.etUserName);
         etPassword = findViewById(R.id.etPasswordUp);
         etVerPass = findViewById(R.id.etVerPassUp);
         etEmail = findViewById(R.id.etEmailUp);
