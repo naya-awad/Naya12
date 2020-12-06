@@ -20,9 +20,11 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="91dp"
-        android:layout_height="91dp"
-        app:srcCompat="@mipmap/ic_camera"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="580dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_camera" />
 </androidx.constraintlayout.widget.ConstraintLayout>
