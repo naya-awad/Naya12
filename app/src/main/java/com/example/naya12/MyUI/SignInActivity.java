@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.naya12.MyUtils.MyValidation;
 import com.example.naya12.R;
+import com.example.naya12.data.MainMapsActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -90,7 +91,7 @@ public class SignInActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
-                    Intent i=new Intent(SignInActivity.this, MainActivity.class);
+                    Intent i=new Intent(SignInActivity.this, MainMapsActivity.class);
                     startActivity(i);
                 }
                 else

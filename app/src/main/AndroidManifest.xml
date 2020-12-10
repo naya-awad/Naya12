@@ -32,7 +32,13 @@
 
         <activity
             android:name=".data.MainMapsActivity"
-            android:label="@string/title_activity_main_maps"></activity>
+            android:label="@string/title_activity_main_maps">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".data.AddItemActivity" />
         <activity android:name=".MyUI.ItemActivity" />
         <activity android:name=".MyUI.AdvertiseActivity" /> <!-- Set to true if app can function without mobile companion app. -->
@@ -49,13 +55,9 @@
         <activity android:name=".MyUI.BuyingGPS" />
         <activity android:name=".MyUI.SignInActivity" />
         <activity android:name=".MyUI.SignUpActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
+
     </application>
 
 </manifest>

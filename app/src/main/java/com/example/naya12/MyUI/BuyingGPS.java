@@ -25,7 +25,6 @@ public abstract class BuyingGPS extends AppCompatActivity {
 
         BuyGPStxt=findViewById(R.id.BuyGPStxt);
         Calltxt=findViewById(R.id.Calltxt);
-        GPSimg=findViewById(R.id.GPSimg);
         PhoneCallbtn=findViewById(R.id.PhoneCallbtn);
         Gobtn=findViewById(R.id.Gobtn);
     }
