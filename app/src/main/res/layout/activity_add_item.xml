@@ -11,8 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="31dp"
+        android:layout_marginBottom="235dp"
         android:text="Add"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,28 +44,43 @@
         app:layout_constraintTop_toBottomOf="@+id/etNameItem" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="128dp"
-        android:layout_height="112dp"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="326dp">
+        android:layout_height="0dp"
+        android:layout_marginBottom="130dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtADD">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioPerson"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Person" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioPet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Pet" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RadioButton" />
+            android:text="Item" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSaveItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="115dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
