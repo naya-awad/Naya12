@@ -1,4 +1,4 @@
-package com.example.naya12.data;
+package com.example.naya12.MyUI;
 
 import androidx.appcompat.app.AppCompatActivity;
 

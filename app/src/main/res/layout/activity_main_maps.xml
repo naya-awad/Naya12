@@ -10,7 +10,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="475dp"
-        tools:context=".data.MainMapsActivity" />
+        tools:context=".MyUI.MainMapsActivity" />
 
     <ListView
         android:id="@+id/lstItems"
