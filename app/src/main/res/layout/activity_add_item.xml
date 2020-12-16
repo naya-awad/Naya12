@@ -23,7 +23,7 @@
         android:id="@+id/etNameItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="3dp"
         android:ems="10"
         android:hint="Name"
@@ -35,11 +35,12 @@
         android:id="@+id/etCodeGPS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Code GPS"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameItem" />
 
@@ -50,6 +51,7 @@
         android:layout_marginBottom="130dp"
         app:layout_constraintBottom_toTopOf="@+id/btnSaveItem"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtADD">
 
@@ -70,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Item" />
+
     </RadioGroup>
 
     <Button
@@ -81,11 +84,19 @@
         tools:layout_editor_absoluteY="667dp" />
 
     <Button
-        android:id="@+id/btnUpload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Upload"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="559dp" />
+        android:id="@+id/btnChooseImage"
+        android:layout_width="124dp"
+        android:layout_height="59dp"
+        android:text="Choose Image"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="537dp" />
+
+    <ImageView
+        android:id="@+id/imgWood"
+        android:layout_width="249dp"
+        android:layout_height="270dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="419dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
