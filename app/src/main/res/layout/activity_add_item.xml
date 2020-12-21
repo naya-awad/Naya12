@@ -11,10 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="31dp"
-        android:layout_marginBottom="235dp"
+        android:layout_marginBottom="32dp"
         android:text="Add"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintBottom_toTopOf="@+id/etNameItem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,37 +23,37 @@
         android:id="@+id/etNameItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="3dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/etCodeGPS"
+        app:layout_constraintBottom_toTopOf="@+id/etCodeGPS"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtADD" />
 
     <EditText
         android:id="@+id/etCodeGPS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="9dp"
         android:ems="10"
         android:hint="Code GPS"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="@+id/etNameItem"
         app:layout_constraintTop_toBottomOf="@+id/etNameItem" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="128dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="130dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSaveItem"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.416"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtADD">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgWood"
+        app:layout_constraintEnd_toEndOf="@+id/imgWood"
+        app:layout_constraintStart_toStartOf="@+id/imgWood"
+        app:layout_constraintTop_toBottomOf="@+id/etCodeGPS">
 
         <RadioButton
             android:id="@+id/radioPerson"
@@ -79,24 +79,35 @@
         android:id="@+id/btnSaveItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
         android:text="Save"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="667dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChooseImage" />
 
     <Button
         android:id="@+id/btnChooseImage"
-        android:layout_width="124dp"
-        android:layout_height="59dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
         android:text="Choose Image"
-        tools:layout_editor_absoluteX="271dp"
-        tools:layout_editor_absoluteY="537dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgWood" />
 
     <ImageView
         android:id="@+id/imgWood"
-        android:layout_width="249dp"
-        android:layout_height="270dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="419dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        android:layout_width="127dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnChooseImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:srcCompat="@drawable/common_google_signin_btn_icon_dark_focused" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
