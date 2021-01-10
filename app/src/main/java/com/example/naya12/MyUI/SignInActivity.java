@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.naya12.MyUtils.MyValidation;
 import com.example.naya12.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -49,7 +48,7 @@ public class SignInActivity extends AppCompatActivity {
         LogInbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(SignInActivity.this, AdvertiseActivity.class);
+                Intent i=new Intent(SignInActivity.this, MainMapsActivity.class);
                 startActivity(i);
 
             }
@@ -90,7 +89,7 @@ public class SignInActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
-                    Intent i=new Intent(SignInActivity.this, MainActivity.class);
+                    Intent i=new Intent(SignInActivity.this, MainMapsActivity.class);
                     startActivity(i);
                 }
                 else
