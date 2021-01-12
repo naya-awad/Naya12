@@ -5,6 +5,9 @@ public class MyPerson<name> extends MyPet
     private String namePerson;
     private String codeGPSPerson;
 
+    public MyPerson() {
+    }
+
     public MyPerson(String namePerson, String  codeGPSPerson)
     {
         super();
