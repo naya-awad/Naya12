@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#57A5F1D0"
+    tools:context=".MyUI.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/SignUptxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/etFirstNameUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColorHint="#9C9999" />
+
+            <EditText
+                android:id="@+id/etLastNameUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColorHint="#9C9999" />
+
+            <EditText
+                android:id="@+id/etPhoneUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Phone"
+                android:inputType="phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColorHint="#9C9999" />
+
+            <EditText
+                android:id="@+id/etEmailUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColorHint="#9C9999" />
+
+            <EditText
+                android:id="@+id/etPasswordUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColorHint="#9C9999" />
+
+            <EditText
+                android:id="@+id/etVerPassUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Verify Password"
+                android:inputType="textPassword"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColorHint="#9C9999" />
+
+            <Button
+                android:id="@+id/SavebtnUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#C43BC59E"
+                android:text="Save"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
