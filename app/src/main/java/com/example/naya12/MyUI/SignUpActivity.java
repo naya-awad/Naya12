@@ -105,6 +105,8 @@ public class SignUpActivity extends AppCompatActivity {
                         {
                             Toast.makeText(SignUpActivity.this, "Successfully up", Toast.LENGTH_SHORT).show();
                             //next screen or close this screen
+                            //get other data and save it in firebase
+
                             finish();//close this screen
                             //next screen
                             //Intent i= new Intent(getBaseContext(),MainActivity.class); startActivity(i);
