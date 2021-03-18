@@ -107,6 +107,10 @@ public class SignUpActivity extends AppCompatActivity {
                             //next screen or close this screen
                             //get other data and save it in firebase
 
+                            String firstn = etFirstName.getText().toString();
+                            String lastn = etLastName.getText().toString();
+                            String phone = etPhone.getText().toString();
+
                             finish();//close this screen
                             //next screen
                             //Intent i= new Intent(getBaseContext(),MainActivity.class); startActivity(i);

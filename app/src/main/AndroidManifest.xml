@@ -39,13 +39,8 @@
             android:label="@string/title_activity_main_maps">
 
         </activity>
-        <activity android:name=".MyUI.AddItemActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MyUI.AddItemActivity"/>
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
 
         <activity android:name=".MyUI.ItemActivity" />
         <activity android:name=".MyUI.AdvertiseActivity" /> <!-- Set to true if app can function without mobile companion app. -->
@@ -60,7 +55,13 @@
         <activity android:name=".MyUI.ChangePassword" />
         <activity android:name=".MyUI.ForgotPassword" />
         <activity android:name=".MyUI.BuyingGPS" />
-        <activity android:name=".MyUI.SignInActivity" />
+        <activity android:name=".MyUI.SignInActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
         <activity android:name=".MyUI.SignUpActivity" />
