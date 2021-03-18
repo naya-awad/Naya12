@@ -17,6 +17,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.naya12.R;
+import com.example.naya12.data.MyItem;
+import com.example.naya12.data.MyPerson;
+import com.example.naya12.data.MyPet;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AddItemActivity extends AppCompatActivity {
 
@@ -31,7 +39,8 @@ public class AddItemActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
 
@@ -95,6 +104,80 @@ public class AddItemActivity extends AppCompatActivity {
             //set image to image view
             imgWood.setImageURI(data.getData());
         }
+    }
+    private void validateForm()
+    {
+        String type="";
+        String name=etNameItem.getText().toString();
+        String codeGPS=etCodeGPS.getText().toString();
+        if (radioItem.isSelected())
+            type="Item";
+        if (radioPerson.isSelected())
+            type="Person";
+        if (radioPet.isSelected())
+            type="Pet";
+        boolean isOK=true;
+        if(name.length()<2)
+            isOK=false;
+        if (codeGPS.length()<10)
+            isOK=false;
+        if(isOK==true)
+        {
+            MyItem item=new MyItem();
+            if(type=="Person")
+            {
+                MyPerson person=new MyPerson();
+                person.setNamePerson(name);
+                person.setCodeGPSPerson(codeGPS);
+                item=person;
+            }
+            if(type=="Pet")
+            {
+                MyPet pet=new MyPet();
+                pet.setNamePet(name);
+                pet.setCodeGPSPet(codeGPS);
+                item=pet;
+            }
+            if(type=="Item")
+            {
+               item=new MyItem();
+                item.getNameItem(name);
+                item.setCodeGPSItem(codeGPS);
+            }
+            saveItem(item);
+        }
+
+
+
+    }
+
+    private void saveItem(MyItem item) {
+        //1.
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        //2.
+        DatabaseReference reference = database.getReference();
+        //3. user id
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        String uid = auth.getCurrentUser().getUid();
+        //4. My Object Key
+        String key = reference.child("AllItems").push().getKey();
+        //5. Update Your Object
+        item.setNameItem(uid);
+        item.setCodeGPSItem(key);
+        //6. Actual Stroring
+        reference.child("AllTasks").child(uid).child(key).setValue(item).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(AddItemActivity.this,"add Successful",Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+                else{
+                    Toast.makeText(AddItemActivity.this,"add Failed"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    task.getException().printStackTrace();
+                }
+            }
+        });
     }
 
 }

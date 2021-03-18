@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "445004847836",
+    "firebase_url": "https://naya12-fee7f.firebaseio.com",
+    "project_id": "naya12-fee7f",
+    "storage_bucket": "naya12-fee7f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:445004847836:android:1bab549bd389e1d7d4b219",
+        "android_client_info": {
+          "package_name": "com.example.naya12"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "445004847836-ob04l52n38ah9g450tdec5dif9kq6o68.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.naya12",
+            "certificate_hash": "81aaf49184dd496cf74880b4364f6cd604536aa6"
+          }
+        },
+        {
+          "client_id": "445004847836-jrcf45allmkqff456cbuljt94ubvh9p5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-0Wdr7MoxIcPJv3ojmDH5tufycFe3flw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "445004847836-jrcf45allmkqff456cbuljt94ubvh9p5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
