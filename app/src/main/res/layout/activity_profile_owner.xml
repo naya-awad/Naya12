@@ -21,15 +21,15 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/SignUptxt"
+                android:id="@+id/OwProfiletxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="Owner's Profile"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display3"
                 android:textColor="#000000" />
 
             <EditText
-                android:id="@+id/etFirstNameUp"
+                android:id="@+id/etFirstNamePr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -39,7 +39,7 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etLastNameUp"
+                android:id="@+id/etLastNamePr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -49,7 +49,7 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etPhoneUp"
+                android:id="@+id/etPhonePr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -58,38 +58,8 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColorHint="#9C9999" />
 
-            <EditText
-                android:id="@+id/etEmailUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="E-mail"
-                android:inputType="textEmailAddress"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColorHint="#9C9999" />
-
-            <EditText
-                android:id="@+id/etPasswordUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColorHint="#9C9999" />
-
-            <EditText
-                android:id="@+id/etVerPassUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Verify Password"
-                android:inputType="textPassword"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColorHint="#9C9999" />
-
             <Button
-                android:id="@+id/SavebtnUp"
+                android:id="@+id/SavebtnPr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="#C43BC59E"

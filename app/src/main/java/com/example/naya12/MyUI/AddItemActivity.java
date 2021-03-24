@@ -72,7 +72,14 @@ public class AddItemActivity extends AppCompatActivity {
                 }
             }
         });
+        btnSaveItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                validateForm();
+            }
+        });
     }
+
 
     private void pickImageFromGallery(){
         //intent to pick image
@@ -119,7 +126,7 @@ public class AddItemActivity extends AppCompatActivity {
         boolean isOK=true;
         if(name.length()<2)
             isOK=false;
-        if (codeGPS.length()<10)
+        if (codeGPS.length()<8)
             isOK=false;
         if(isOK==true)
         {
