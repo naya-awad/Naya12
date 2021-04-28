@@ -1,6 +1,6 @@
 package com.example.naya12.data;
 
-public class MyPet extends MyItem
+public class MyPet extends MyClient
 {
     private String namePet;
     private String codeGPSPet;

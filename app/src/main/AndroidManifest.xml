@@ -39,7 +39,7 @@
             android:label="@string/title_activity_main_maps">
 
         </activity>
-        <activity android:name=".MyUI.AddItemActivity"/>
+        <activity android:name=".MyUI.AddClientActivity"/>
 
 
         <activity android:name=".MyUI.ItemActivity" />

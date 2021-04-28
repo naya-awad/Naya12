@@ -13,9 +13,9 @@ import com.example.naya12.R;
 
 import java.util.ArrayList;
 
-public class ItemsAdapter extends ArrayAdapter<MyItem>
+public class ClientsAdapter extends ArrayAdapter<MyClient>
 {
-    public ItemsAdapter(@NonNull Context context, int resource) {
+    public ClientsAdapter(@NonNull Context context, int resource) {
         super(context, resource);
     }
 

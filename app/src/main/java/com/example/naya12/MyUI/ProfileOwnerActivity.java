@@ -20,5 +20,7 @@ public class ProfileOwnerActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_owner);
 
-        OwProfiletxt=findViewById(R.id.OwProfiletxt);
+        OwProfiletxt = findViewById(R.id.OwProfiletxt);
+    }
+
 }

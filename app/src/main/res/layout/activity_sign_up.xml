@@ -58,23 +58,6 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColorHint="#9C9999" />
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Owner" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Client" />
-            </RadioGroup>
-
             <Button
                 android:id="@+id/SavebtnUp"
                 android:layout_width="match_parent"

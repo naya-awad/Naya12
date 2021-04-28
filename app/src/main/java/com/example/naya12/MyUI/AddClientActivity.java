@@ -17,7 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.naya12.R;
-import com.example.naya12.data.MyItem;
+import com.example.naya12.data.MyClient;
 import com.example.naya12.data.MyPerson;
 import com.example.naya12.data.MyPet;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -26,10 +26,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class AddItemActivity extends AppCompatActivity {
+public class AddClientActivity extends AppCompatActivity {
 
     private TextView txtADD;
-    private EditText etNameItem,etCodeGPS;
+    private EditText etNameItem,phoneC;
     private RadioButton radioPerson,radioPet,radioItem;
     private Button btnSaveItem,btnChooseImage;
     private ImageView imgWood;
@@ -42,11 +42,11 @@ public class AddItemActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_item);
+        setContentView(R.layout.activity_add_client);
 
         txtADD=findViewById(R.id.txtADD);
         etNameItem=findViewById(R.id.etNameItem);
-        etCodeGPS=findViewById(R.id.etCodeGPS);
+        phoneC=findViewById(R.id.phoneC);
         radioPerson=findViewById(R.id.radioPerson);
         radioPet=findViewById(R.id.radioPet);
         radioItem=findViewById(R.id.radioItem);
@@ -116,7 +116,7 @@ public class AddItemActivity extends AppCompatActivity {
     {
         String type="";
         String name=etNameItem.getText().toString();
-        String codeGPS=etCodeGPS.getText().toString();
+        String codeGPS=phoneC.getText().toString();
         if (radioItem.isSelected())
             type="Item";
         if (radioPerson.isSelected())
@@ -130,35 +130,35 @@ public class AddItemActivity extends AppCompatActivity {
             isOK=false;
         if(isOK==true)
         {
-            MyItem item=new MyItem();
+            MyClient client=new MyClient();
             if(type=="Person")
             {
                 MyPerson person=new MyPerson();
                 person.setNamePerson(name);
                 person.setCodeGPSPerson(codeGPS);
-                item=person;
+                client=person;
             }
             if(type=="Pet")
             {
                 MyPet pet=new MyPet();
                 pet.setNamePet(name);
                 pet.setCodeGPSPet(codeGPS);
-                item=pet;
+                client=pet;
             }
             if(type=="Item")
             {
-               item=new MyItem();
-                item.getNameItem(name);
-                item.setCodeGPSItem(codeGPS);
+              MyClient c=new MyClient();
+                c.getNameClient(name);
+                c.setPhoneClient(codeGPS);
             }
-            saveItem(item);
+            saveClient(client);
         }
 
 
 
     }
 
-    private void saveItem(MyItem item) {
+    private void saveClient(MyClient client) {
         //1.
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         //2.
@@ -167,20 +167,20 @@ public class AddItemActivity extends AppCompatActivity {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         String uid = auth.getCurrentUser().getUid();
         //4. My Object Key
-        String key = reference.child("AllItems").push().getKey();
+        String key = reference.child("AllClients").push().getKey();
         //5. Update Your Object
-        item.setNameItem(uid);
-        item.setCodeGPSItem(key);
+        client.setNameClient(uid);
+        client.setPhoneClient(key);
         //6. Actual Stroring
-        reference.child("AllTasks").child(uid).child(key).setValue(item).addOnCompleteListener(new OnCompleteListener<Void>() {
+        reference.child("AllTasks").child(uid).child(key).setValue(client).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(AddItemActivity.this,"add Successful",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddClientActivity.this,"add Successful",Toast.LENGTH_SHORT).show();
                     finish();
                 }
                 else{
-                    Toast.makeText(AddItemActivity.this,"add Failed"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddClientActivity.this,"add Failed"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();
                 }
             }
