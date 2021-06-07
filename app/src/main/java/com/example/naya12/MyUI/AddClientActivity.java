@@ -18,8 +18,7 @@ import android.widget.Toast;
 
 import com.example.naya12.R;
 import com.example.naya12.data.MyClient;
-import com.example.naya12.data.MyPerson;
-import com.example.naya12.data.MyPet;
+import com.example.naya12.data.MyItem;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,7 +29,7 @@ public class AddClientActivity extends AppCompatActivity {
 
     private TextView txtADD;
     private EditText etNameItem,phoneC;
-    private RadioButton radioPerson,radioPet,radioItem;
+    public RadioButton radioPerson,radioPet,radioItem;
     private Button btnSaveItem,btnChooseImage;
     private ImageView imgWood;
 
@@ -117,40 +116,25 @@ public class AddClientActivity extends AppCompatActivity {
         String type="";
         String name=etNameItem.getText().toString();
         String codeGPS=phoneC.getText().toString();
-        if (radioItem.isSelected())
-            type="Item";
-        if (radioPerson.isSelected())
-            type="Person";
-        if (radioPet.isSelected())
-            type="Pet";
+
         boolean isOK=true;
         if(name.length()<2)
             isOK=false;
-        if (codeGPS.length()<8)
+        if (phoneC.length()<10)
             isOK=false;
         if(isOK==true)
         {
-            MyClient client=new MyClient();
-            if(type=="Person")
-            {
-                MyPerson person=new MyPerson();
-                person.setNamePerson(name);
-                person.setCodeGPSPerson(codeGPS);
-                client=person;
-            }
-            if(type=="Pet")
-            {
-                MyPet pet=new MyPet();
-                pet.setNamePet(name);
-                pet.setCodeGPSPet(codeGPS);
-                client=pet;
-            }
-            if(type=="Item")
-            {
-              MyClient c=new MyClient();
-                c.getNameClient(name);
-                c.setPhoneClient(codeGPS);
-            }
+            MyClient client = new MyClient();
+            MyItem item = new MyItem();
+
+            if (radioItem.isSelected())
+                item.setTypeItem("Item");
+            if (radioPerson.isSelected())
+                item.setTypeItem("Person");
+            if (radioPet.isSelected())
+                item.setTypeItem("Pet");
+
+
             saveClient(client);
         }
 

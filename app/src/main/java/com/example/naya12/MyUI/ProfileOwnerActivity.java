@@ -1,6 +1,8 @@
 package com.example.naya12.MyUI;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,6 +23,18 @@ public class ProfileOwnerActivity extends AppCompatActivity
         setContentView(R.layout.activity_profile_owner);
 
         OwProfiletxt = findViewById(R.id.OwProfiletxt);
+       etFirstNamePr = findViewById(R.id.etFirstNamePr);
+        etLastNamePr = findViewById(R.id.etLastNamePr);
+        etPhonePr = findViewById(R.id.etPhonePr);
+        SavebtnPr = findViewById(R.id.SavebtnPr);
+
+        SavebtnPr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ProfileOwnerActivity.this, MainMapsActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
 }

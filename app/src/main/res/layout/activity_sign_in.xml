@@ -20,6 +20,7 @@
             android:text="Sign In"
             android:textAppearance="@style/TextAppearance.AppCompat.Display4"
             android:textColor="#000000" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -46,29 +47,6 @@
             android:inputType="textPassword"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:id="@+id/ownerIn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Owner" />
-
-            <RadioButton
-                android:id="@+id/clientIn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Client" />
-        </RadioGroup>
-
-        <Button
-            android:id="@+id/btnForgot"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00FFFFFF"
-            android:text="Forgot Your Password?" />
 
         <Button
             android:id="@+id/nextbtn"
@@ -80,7 +58,7 @@
             android:id="@+id/txtCreateAccount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="You Don't have a n account! Create one."
+            android:text="You Don't have an account! Create one."
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="24sp" />
 
@@ -89,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#C43BC59E"
-            android:text="SignUp (Owner)"
+            android:text="SignUp"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="#000000"
             android:textColorHint="#000000" />
