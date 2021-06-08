@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#57A5F1D0"
+    android:background="@drawable/background"
+    android:backgroundTint="@drawable/background"
     tools:context=".MyUI.SignInActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background"
         android:orientation="vertical">
 
         <TextView
@@ -52,7 +53,11 @@
             android:id="@+id/nextbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next" />
+            android:background="#FFFFFF"
+            android:text="Next"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#000000"
+            android:textColorHint="#0C0000" />
 
         <TextView
             android:id="@+id/txtCreateAccount"
@@ -66,7 +71,7 @@
             android:id="@+id/btnSignUpIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="#C43BC59E"
+            android:backgroundTint="#FFFFFF"
             android:text="SignUp"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="#000000"

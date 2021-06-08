@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#57A5F1D0"
+    android:background="@drawable/background"
     tools:context=".MyUI.SignUpActivity">
 
     <LinearLayout
@@ -62,7 +61,7 @@
                 android:id="@+id/SavebtnUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#C43BC59E"
+                android:backgroundTint="#FFFFFF"
                 android:text="Save"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColor="#000000" />

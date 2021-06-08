@@ -17,7 +17,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyUI.OwnerOrClientActivity"></activity>
+        <activity android:name=".MyUI.OwnerOrClientActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -35,6 +41,8 @@
             android:label="@string/title_activity_main_maps"></activity>
         <activity android:name=".MyUI.AddClientActivity" />
         <activity android:name=".MyUI.ItemActivity" />
+        <activity android:name=".MyUI.ProfileOwnerActivity"></activity>
+        <activity android:name="ProfileClientActivity"/>
         <activity android:name=".MyUI.AdvertiseActivity" /> <!-- Set to true if app can function without mobile companion app. -->
         <meta-data
             android:name="com.google.android.wearable.standalone"
@@ -44,16 +52,8 @@
             android:name="com.google.android.wearable"
             android:required="false" />
 
-        <activity android:name=".MyUI.ChangePassword" />
-        <activity android:name=".MyUI.ForgotPassword" />
-        <activity android:name=".MyUI.BuyingGPS" />
-        <activity android:name=".MyUI.SignInActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MyUI.SignInActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".MyUI.SignUpActivity" />
     </application>
 

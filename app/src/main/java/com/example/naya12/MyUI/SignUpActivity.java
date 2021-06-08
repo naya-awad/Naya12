@@ -115,6 +115,9 @@ public class SignUpActivity extends AppCompatActivity {
                 //3
                 auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(listener);
 
+                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(i);
+
             }
 
         });

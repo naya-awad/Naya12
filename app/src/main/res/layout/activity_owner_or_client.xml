@@ -22,7 +22,8 @@
             android:layout_gravity="center"
             android:background="#FFFFFF"
             android:text="Owner"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="#070707" />
 
         <Button
             android:id="@+id/clientGo"
@@ -31,6 +32,7 @@
             android:layout_gravity="center"
             android:background="#FFFFFF"
             android:text="Client"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="#070707" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
