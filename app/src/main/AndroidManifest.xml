@@ -42,7 +42,7 @@
         <activity android:name=".MyUI.AddClientActivity" />
         <activity android:name=".MyUI.ItemActivity" />
         <activity android:name=".MyUI.ProfileOwnerActivity"></activity>
-        <activity android:name="ProfileClientActivity"/>
+        <activity android:name=".MyUI.ProfileClientActivity"/>
         <activity android:name=".MyUI.AdvertiseActivity" /> <!-- Set to true if app can function without mobile companion app. -->
         <meta-data
             android:name="com.google.android.wearable.standalone"
