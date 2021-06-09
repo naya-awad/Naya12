@@ -23,5 +23,15 @@ public class ProfileClientActivity  extends AppCompatActivity
         setContentView(R.layout.activity_profile_client);
 
 
+        etNamePrCl=findViewById(R.id.etNamePrCl);
+        etEmailPrCl=findViewById(R.id.etEmailPrCl);
+        etPhoneOwPr=findViewById(R.id.etPhoneOwPr);
+        etPhoneClPrCl=findViewById(R.id.etPhoneClPrCl);
+        radioPersonPrCl=findViewById(R.id.radioPersonPrCl);
+        radioPetPrCl=findViewById(R.id.radioPetPrCl);
+        radioItemPrCl=findViewById(R.id.radioItemPrCl);
+        SavebtnPrCl=findViewById(R.id.SavebtnPrCl);
+
+
     }
 }

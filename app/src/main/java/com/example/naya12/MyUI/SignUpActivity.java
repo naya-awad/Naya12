@@ -100,6 +100,7 @@ public class SignUpActivity extends AppCompatActivity {
                             //get other data and save it in firebase
 
                             Intent i = new Intent(SignUpActivity.this, ProfileOwnerActivity.class);
+                            i.putExtra("Email",email);
                             startActivity(i);
 
 

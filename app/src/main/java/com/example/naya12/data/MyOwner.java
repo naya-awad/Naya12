@@ -2,12 +2,13 @@ package com.example.naya12.data;
 
 public class MyOwner {
 
-    private String phone, firtn, lastn;
+    private String phone, firstn, lastn,emailOw;
 
-    public MyOwner(String phone, String firtn, String lastn) {
+    public MyOwner(String phone, String firstn, String lastn, String emailOw) {
         this.phone = phone;
-        this.firtn = firtn;
+        this.firstn = firstn;
         this.lastn = lastn;
+        this.emailOw= emailOw;
     }
 
     public String getPhone() {
@@ -18,12 +19,12 @@ public class MyOwner {
         this.phone = phone;
     }
 
-    public String getFirtn() {
-        return firtn;
+    public String getFirstn() {
+        return firstn;
     }
 
-    public void setFirtn(String firtn) {
-        this.firtn = firtn;
+    public void setFirstn(String firtn) {
+        this.firstn = firtn;
     }
 
     public String getLastn() {
@@ -34,11 +35,19 @@ public class MyOwner {
         this.lastn = lastn;
     }
 
+    public String getEmailOw() {
+        return emailOw;
+    }
+
+    public void setEmailOw(String emailOw) {
+        this.emailOw = emailOw;
+    }
+
     @Override
     public String toString() {
         return "MyOwner{" +
                 "phone='" + phone + '\'' +
-                ", firtn='" + firtn + '\'' +
+                ", firtn='" + firstn + '\'' +
                 ", lastn='" + lastn + '\'' +
                 '}';
     }

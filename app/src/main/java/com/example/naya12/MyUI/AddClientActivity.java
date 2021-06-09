@@ -115,7 +115,7 @@ public class AddClientActivity extends AppCompatActivity {
     {
         String type="";
         String name=etNameItem.getText().toString();
-        String codeGPS=phoneC.getText().toString();
+        String phonec=phoneC.getText().toString();
 
         boolean isOK=true;
         if(name.length()<2)
@@ -156,7 +156,7 @@ public class AddClientActivity extends AppCompatActivity {
         client.setNameClient(uid);
         client.setPhoneClient(key);
         //6. Actual Stroring
-        reference.child("AllTasks").child(uid).child(key).setValue(client).addOnCompleteListener(new OnCompleteListener<Void>() {
+        reference.child("AllClients").child(uid).child(key).setValue(client).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){

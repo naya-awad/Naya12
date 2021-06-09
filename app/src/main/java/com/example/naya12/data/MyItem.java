@@ -2,9 +2,24 @@ package com.example.naya12.data;
 
 public class MyItem
 {
+    /*
+    Item's name
+     */
     private String nameItem;
+    /*
+    Item's phone
+     */
     private String phoneItem;
+    /*
+    Item's type (pet, person, Item)
+     */
     private String typeItem;
+
+
+
+    /*
+    constructors
+     */
 
     public MyItem() {
 
@@ -15,6 +30,10 @@ public class MyItem
         this.phoneItem = phoneItem;
         this.typeItem = typeItem;
     }
+
+    /*
+    getters & setters
+     */
 
     public String getNameItem() {
         return nameItem;

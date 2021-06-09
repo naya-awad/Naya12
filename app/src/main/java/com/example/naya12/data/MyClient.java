@@ -3,6 +3,8 @@ package com.example.naya12.data;
 public class MyClient {
     private String nameClient;
     private String phoneClient;//String because it can start with 0
+    private String keyCl;
+    private String ownerCl;
 
 
 
