@@ -40,8 +40,7 @@ public class ProfileOwnerActivity extends AppCompatActivity {
         SavebtnPr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(ProfileOwnerActivity.this, MainMapsActivity.class);
-                startActivity(i);
+                validateForm();
             }
         });
 
@@ -81,8 +80,8 @@ public class ProfileOwnerActivity extends AppCompatActivity {
         //4. My Object Key
         String key = reference.child("AllClients").push().getKey();
         //5. Update Your Object
-        myOwner.setFirstn(uid);
-        myOwner.setPhone(key);
+        myOwner.setKeyOw(uid);
+        myOwner.setOwnerOw(key);
         //6. Actual Stroring
         reference.child("AllOwners").child(key).setValue(myOwner).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

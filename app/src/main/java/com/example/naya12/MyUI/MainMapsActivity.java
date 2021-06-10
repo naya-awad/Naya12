@@ -2,7 +2,11 @@ package com.example.naya12.MyUI;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.naya12.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -15,6 +19,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MainMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    private Button btnAddClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +29,20 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        btnAddClient=findViewById(R.id.btnAddClient);
+
+        btnAddClient.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainMapsActivity.this, AddClientActivity.class);
+                startActivity(i);
+            }
+        });
+
     }
+
+
 
     /**
      * Manipulates the map once available.

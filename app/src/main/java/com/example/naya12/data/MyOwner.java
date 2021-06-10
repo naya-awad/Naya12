@@ -2,7 +2,7 @@ package com.example.naya12.data;
 
 public class MyOwner {
 
-    private String phone, firstn, lastn,emailOw;
+    private String phone, firstn, lastn,emailOw, keyOw, ownerOw;
 
     public MyOwner(String phone, String firstn, String lastn, String emailOw) {
         this.phone = phone;
@@ -41,6 +41,22 @@ public class MyOwner {
 
     public void setEmailOw(String emailOw) {
         this.emailOw = emailOw;
+    }
+
+    public String getKeyOw() {
+        return keyOw;
+    }
+
+    public void setKeyOw(String keyOw) {
+        this.keyOw = keyOw;
+    }
+
+    public String getOwnerOw() {
+        return ownerOw;
+    }
+
+    public void setOwnerOw(String ownerOw) {
+        this.ownerOw = ownerOw;
     }
 
     @Override

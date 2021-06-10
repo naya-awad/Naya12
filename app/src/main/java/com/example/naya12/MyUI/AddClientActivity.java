@@ -125,14 +125,13 @@ public class AddClientActivity extends AppCompatActivity {
         if(isOK==true)
         {
             MyClient client = new MyClient();
-            MyItem item = new MyItem();
 
             if (radioItem.isSelected())
-                item.setTypeItem("Item");
+                client.setTypeClient("Item");
             if (radioPerson.isSelected())
-                item.setTypeItem("Person");
+                client.setTypeClient("Person");
             if (radioPet.isSelected())
-                item.setTypeItem("Pet");
+                client.setTypeClient("Pet");
 
 
             saveClient(client);
@@ -153,8 +152,8 @@ public class AddClientActivity extends AppCompatActivity {
         //4. My Object Key
         String key = reference.child("AllClients").push().getKey();
         //5. Update Your Object
-        client.setNameClient(uid);
-        client.setPhoneClient(key);
+        client.setOwnerCl(uid);
+        client.setKeyCl(key);
         //6. Actual Stroring
         reference.child("AllClients").child(uid).child(key).setValue(client).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
@@ -169,6 +168,8 @@ public class AddClientActivity extends AppCompatActivity {
                 }
             }
         });
+        Intent i = new Intent(AddClientActivity.this, MainMapsActivity.class);
+        startActivity(i);
     }
 
 }
