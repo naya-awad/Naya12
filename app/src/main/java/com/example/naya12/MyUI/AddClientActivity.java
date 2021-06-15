@@ -159,6 +159,8 @@ public class AddClientActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
+                    Intent i = new Intent(AddClientActivity.this, MainMapsActivity.class);
+                    startActivity(i);
                     Toast.makeText(AddClientActivity.this,"add Successful",Toast.LENGTH_SHORT).show();
                     finish();
                 }
@@ -168,8 +170,7 @@ public class AddClientActivity extends AppCompatActivity {
                 }
             }
         });
-        Intent i = new Intent(AddClientActivity.this, MainMapsActivity.class);
-        startActivity(i);
+
     }
 
 }

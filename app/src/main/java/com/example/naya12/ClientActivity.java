@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.wearable.activity.WearableActivity;
 import android.widget.TextView;
 
-public class ClientActivity extends WearableActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ClientActivity extends AppCompatActivity {
 
     private TextView mTextView;
 
@@ -15,7 +17,6 @@ public class ClientActivity extends WearableActivity {
 
         mTextView = (TextView) findViewById(R.id.text);
 
-        // Enables Always-on
-        setAmbientEnabled();
+
     }
 }

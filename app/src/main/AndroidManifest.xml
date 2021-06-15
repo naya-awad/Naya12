@@ -20,29 +20,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <uses-library
-            android:name="com.google.android.wearable"
-            android:required="true" />
+
 
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
         -->
-        <meta-data
-            android:name="com.google.android.wearable.standalone"
-            android:value="true" />
+
 
         <activity
             android:name=".ClientActivity"
             android:label="@string/title_activity_client"></activity>
         <activity android:name=".MyUI.MainClientActivity" />
-        <activity android:name=".MyUI.OwnerOrClientActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -60,10 +50,15 @@
             android:label="@string/title_activity_main_maps" />
         <activity android:name=".MyUI.AddClientActivity" />
         <activity android:name=".MyUI.ItemActivity" />
-        <activity android:name=".MyUI.ProfileOwnerActivity" />
-        <activity android:name=".MyUI.ProfileClientActivity" />
+        <activity android:name=".MyUI.ProfileActivity" />
         <activity android:name=".MyUI.AdvertiseActivity" />
-        <activity android:name=".MyUI.SignInActivity" />
+        <activity android:name=".MyUI.SignInActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MyUI.SignUpActivity" />
     </application>
 

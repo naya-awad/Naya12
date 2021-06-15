@@ -29,12 +29,12 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
-        if (firebaseAuth.getCurrentUser() != null)
-        {
-            Intent i = new Intent(SignInActivity.this, MainMapsActivity.class);
-            startActivity(i);
-        }
+       // FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
+       // if (firebaseAuth.getCurrentUser() != null)
+       // {
+           // Intent i = new Intent(SignInActivity.this, MainMapsActivity.class);
+          //  startActivity(i);
+      //  }
         SignIntxt = findViewById(R.id.SignIntxt);
         etEmailIn = findViewById(R.id.etEmailIn);
         etPasswordIn = findViewById(R.id.etPasswordIn);
@@ -90,7 +90,7 @@ public class SignInActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful())
                         {
-                                Intent i = new Intent(SignInActivity.this, AddClientActivity.class);
+                                Intent i = new Intent(SignInActivity.this, ProfileActivity.class);
                                 startActivity(i);
                             }
                          else {

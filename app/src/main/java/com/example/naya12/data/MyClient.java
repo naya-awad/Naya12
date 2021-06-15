@@ -4,17 +4,16 @@ public class MyClient {
     private String nameClient;
     private String phoneClient;//String because it can start with 0
     private String phoneOwner;
-    private String emailClient;
+
     private String typeClient;
     private String keyCl;
     private String ownerCl;
 
 
-    public MyClient(String nameClient, String phoneClient, String phoneOwner, String emailClient, String typeClient) {
+    public MyClient(String nameClient, String phoneClient, String phoneOwner, String typeClient) {
         this.nameClient = nameClient;
         this.phoneClient = phoneClient;
         this.phoneOwner = phoneOwner;
-        this.emailClient = emailClient;
         this.typeClient = typeClient;
     }
 
@@ -46,13 +45,6 @@ public class MyClient {
         this.phoneOwner = phoneOwner;
     }
 
-    public String getEmailClient() {
-        return emailClient;
-    }
-
-    public void setEmailClient(String emailClient) {
-        this.emailClient = emailClient;
-    }
 
     public String getTypeClient() {
         return typeClient;

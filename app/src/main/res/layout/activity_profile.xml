@@ -22,12 +22,30 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/OwProfiletxt"
+                android:id="@+id/Profiletxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Owner's Profile"
+                android:text="Profile"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display3"
                 android:textColor="#000000" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupCO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioOwner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Owner" />
+
+                <RadioButton
+                    android:id="@+id/radioClient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Client" />
+            </RadioGroup>
 
             <EditText
                 android:id="@+id/etFirstNamePr"
@@ -50,14 +68,51 @@
                 android:textColorHint="#9C9999" />
 
             <EditText
-                android:id="@+id/etPhonePr"
+                android:id="@+id/etPhoneOwPr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Phone"
+                android:hint="Phone Owner"
                 android:inputType="phone"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                 android:textColorHint="#9C9999" />
+
+            <EditText
+                android:id="@+id/etPhoneClPr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Phone Client"
+                android:inputType="textPersonName"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColorHint="#9C9999" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPPI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioPersonPrCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Person" />
+
+                <RadioButton
+                    android:id="@+id/radioPetPrCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pet" />
+
+                <RadioButton
+                    android:id="@+id/radioItemPrCl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Item" />
+
+            </RadioGroup>
 
             <Button
                 android:id="@+id/SavebtnPr"

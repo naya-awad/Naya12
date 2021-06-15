@@ -4,7 +4,7 @@ public class MyOwner {
 
     private String phone, firstn, lastn,emailOw, keyOw, ownerOw;
 
-    public MyOwner(String phone, String firstn, String lastn, String emailOw) {
+    public MyOwner(String phone, String firstn, String lastn) {
         this.phone = phone;
         this.firstn = firstn;
         this.lastn = lastn;

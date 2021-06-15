@@ -1,6 +1,7 @@
 package com.example.naya12.data;
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.ImageDecoder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,41 +15,43 @@ import com.example.naya12.R;
 
 import java.util.ArrayList;
 
-public class ClientsAdapter extends ArrayAdapter<MyClient>
-{
+public class ClientsAdapter extends ArrayAdapter<MyClient> {
     public ClientsAdapter(@NonNull Context context, int resource) {
         super(context, resource);
     }
-        /**
-         * \
-         * building the single item view
-         *
-         * @param position    index item in the listView
-         * @param convertView item view
-         * @param parent      listView
-         */
-//        @NonNull
-//        @Override
-        //3.overriding getView
-//        public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent) {
-//            //3.1
-//            View v = LayoutInflater.from(getContext()).inflate(R.layout.activity_item, parent, false);
-//            //3.2 find view by id
-//            TextView nameI = v.findViewById(R.id.nameI);
-//
-//            ImageButton imageI= v.findViewById(R.id.imageI);
-//
-//
 
-//            //3.3 get the suitable task,object
-//            MyItem i = getItem(position);
-//
-//            //3.4 connect the data to the view (view the data using item view)
-//            nameI.setText(i.getTitle());
-//            tvSubject.setText(task.getSub());
-//            switch (task.getImportant()) {
-//                case 5:
-//                    tvNeccessary.setBackgroundColor(Color.RED);
+    /**
+     * \
+     * building the single item view
+     *
+     * @param position    index item in the listView
+     * @param convertView item view
+     * @param parent      listView
+     */
+    @NonNull
+    @Override
+    //3.overriding getView
+    public View getView(int position, @NonNull View convertView, @NonNull ViewGroup parent) {
+        //3.1
+        View v = LayoutInflater.from(getContext()).inflate(R.layout.activity_item, parent, false);
+        //3.2 find view by id
+        TextView nameI = v.findViewById(R.id.nameI);
+
+        ImageButton imageI = v.findViewById(R.id.imageI);
+
+
+        //3.3 get the suitable client,object
+        MyClient i = getItem(position);
+
+        //3.4 connect the data to the view (view the data using item view)
+        nameI.setText(i.getNameClient());
+
+        return v;
+        //           imageI
+        //tvSubject.setText(task.getSub());
+        //           switch (task.getImportant()) {
+        //               case 5:
+        //                   tvNeccessary.setBackgroundColor(Color.RED);
 //                    break;
 //                case 4:
 //                    tvNeccessary.setBackgroundColor(Color.YELLOW);
@@ -84,8 +87,10 @@ public class ClientsAdapter extends ArrayAdapter<MyClient>
 //        }
 //
 //    }
-
+    }
 }
+
+
 
 
 
