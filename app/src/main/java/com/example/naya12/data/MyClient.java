@@ -4,6 +4,7 @@ public class MyClient {
     private String nameClient;
     private String phoneClient;//String because it can start with 0
     private String phoneOwner;
+    private String emailCl;
 
     private String typeClient;
     private String keyCl;
