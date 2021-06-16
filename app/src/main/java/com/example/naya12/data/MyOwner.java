@@ -4,7 +4,7 @@ public class MyOwner {
 
     private String phone, firstn, lastn,emailOw, keyOw, ownerOw;
 
-    public MyOwner(String phone, String firstn, String lastn) {
+    public MyOwner(String phone, String firstn, String lastn,String emailOw) {
         this.phone = phone;
         this.firstn = firstn;
         this.lastn = lastn;
@@ -58,6 +58,7 @@ public class MyOwner {
     public void setOwnerOw(String ownerOw) {
         this.ownerOw = ownerOw;
     }
+
 
     @Override
     public String toString() {

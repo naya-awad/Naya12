@@ -19,7 +19,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MainMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
-    private Button btnAddClient;
+    private Button btnLogOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +30,12 @@ public class MainMapsActivity extends FragmentActivity implements OnMapReadyCall
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        btnAddClient=findViewById(R.id.btnAddClient);
+        btnLogOut=findViewById(R.id.btnLogOut);
 
-        btnAddClient.setOnClickListener(new View.OnClickListener() {
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainMapsActivity.this, AddClientActivity.class);
+                Intent i = new Intent(MainMapsActivity.this, SignInActivity.class);
                 startActivity(i);
             }
         });

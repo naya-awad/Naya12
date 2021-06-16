@@ -83,7 +83,7 @@ public class SignInActivity extends AppCompatActivity {
                 }
             }
 
-            private void signIn(String email, String pass) {
+            private void signIn(final String email, String pass) {
                 FirebaseAuth auth = FirebaseAuth.getInstance().getInstance();
                 auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -91,6 +91,7 @@ public class SignInActivity extends AppCompatActivity {
                         if (task.isSuccessful())
                         {
                                 Intent i = new Intent(SignInActivity.this, ProfileActivity.class);
+                                i.putExtra("email",email);
                                 startActivity(i);
                             }
                          else {

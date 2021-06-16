@@ -11,11 +11,12 @@ public class MyClient {
     private String ownerCl;
 
 
-    public MyClient(String nameClient, String phoneClient, String phoneOwner, String typeClient) {
+    public MyClient(String nameClient, String phoneClient, String phoneOwner, String typeClient,String emailCl) {
         this.nameClient = nameClient;
         this.phoneClient = phoneClient;
         this.phoneOwner = phoneOwner;
         this.typeClient = typeClient;
+        this.emailCl=emailCl;
     }
 
     public MyClient() {
@@ -69,6 +70,14 @@ public class MyClient {
 
     public void setOwnerCl(String ownerCl) {
         this.ownerCl = ownerCl;
+    }
+
+    public String getEmailCl() {
+        return emailCl;
+    }
+
+    public void setEmailCl(String emailCl) {
+        this.emailCl = emailCl;
     }
 
     @Override

@@ -8,9 +8,17 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/btnLogOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:text="Log Out" />
+
+    <Button
         android:id="@+id/btnAddClient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
         android:text="Add Client" />
 
     <fragment

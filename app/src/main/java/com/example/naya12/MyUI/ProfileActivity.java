@@ -92,9 +92,11 @@ public class ProfileActivity extends AppCompatActivity {
         String lN = etLastNamePr.getText().toString();
         String phOw=etPhoneOwPr.getText().toString();
         String phCl=etPhoneClPr.getText().toString();
+        String email=(String)getIntent().getSerializableExtra("email");
 
         if (radioOwner.isChecked())
         {
+
             boolean isOK = true;
             if (fN.length() < 2 || lN.length() < 2)
                 isOK = false;
@@ -102,7 +104,7 @@ public class ProfileActivity extends AppCompatActivity {
                 isOK=false;
             if (isOK==true)
             {
-                MyOwner owner = new MyOwner(phOw, fN, lN);
+                MyOwner owner = new MyOwner(phOw, fN, lN,email);
                 saveOwner(owner);
             }
 
@@ -110,11 +112,11 @@ public class ProfileActivity extends AppCompatActivity {
         if (radioClient.isChecked())
         {
             boolean isOK=true;
-            if (radioItemPrCl.isSelected())
+            if (radioItemPrCl.isChecked())
                 type="Item";
-            if (radioPersonPrCl.isSelected())
+            if (radioPersonPrCl.isChecked())
                 type="Person";
-            if (radioPetPrCl.isSelected())
+            if (radioPetPrCl.isChecked())
                 type="Pet";
             if (fN.length() < 2)
                 isOK=false;
@@ -122,7 +124,7 @@ public class ProfileActivity extends AppCompatActivity {
                 isOK=false;
             if (isOK==true)
             {
-                MyClient client=new MyClient(fN,phCl,phOw,type);
+                MyClient client=new MyClient(fN,phCl,phOw,type,email);
                 saveClient(client);
             }
         }
@@ -144,7 +146,9 @@ public class ProfileActivity extends AppCompatActivity {
         //3. user id
         FirebaseAuth auth = FirebaseAuth.getInstance();
         String uid = auth.getCurrentUser().getUid();
+
         //4. My Object Key
+        myOwner.setEmailOw(auth.getCurrentUser().getEmail());
         String key = reference.child("AllOwners").push().getKey();
         //5. Update Your Object
         myOwner.setKeyOw(uid);
@@ -175,6 +179,8 @@ public class ProfileActivity extends AppCompatActivity {
         FirebaseAuth auth = FirebaseAuth.getInstance();
         String uid = auth.getCurrentUser().getUid();
         //4. My Object Key
+
+        myClient.setEmailCl(auth.getCurrentUser().getEmail());
         String key = reference.child("AllClients").push().getKey();
         //5. Update Your Object
         myClient.setOwnerCl(uid);
