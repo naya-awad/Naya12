@@ -1,7 +1,6 @@
 package com.example.naya12;
 
 import android.os.Bundle;
-import android.support.wearable.activity.WearableActivity;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;

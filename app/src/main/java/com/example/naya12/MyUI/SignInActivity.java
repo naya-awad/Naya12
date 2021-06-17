@@ -22,28 +22,28 @@ public class SignInActivity extends AppCompatActivity {
 
     private TextView SignIntxt, txtCreateAccount;
     private EditText etEmailIn, etPasswordIn;
-    private Button nextbtn, btnSignUp;
+    private Button nextbtn, btnSignUpIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-       // FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
-       // if (firebaseAuth.getCurrentUser() != null)
-       // {
-           // Intent i = new Intent(SignInActivity.this, MainMapsActivity.class);
-          //  startActivity(i);
-      //  }
+        FirebaseAuth firebaseAuth=FirebaseAuth.getInstance();
+        if (firebaseAuth.getCurrentUser() != null)
+        {
+            Intent i = new Intent(SignInActivity.this, MainMapsActivity.class);
+            startActivity(i);
+        }
         SignIntxt = findViewById(R.id.SignIntxt);
         etEmailIn = findViewById(R.id.etEmailIn);
         etPasswordIn = findViewById(R.id.etPasswordIn);
         nextbtn = findViewById(R.id.nextbtn);
         txtCreateAccount = findViewById(R.id.txtCreateAccount);
-        btnSignUp = findViewById(R.id.btnSignUpIn);
+        btnSignUpIn = findViewById(R.id.btnSignUpIn);
 
 
-        btnSignUp.setOnClickListener(new View.OnClickListener() {
+        btnSignUpIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SignInActivity.this, SignUpActivity.class);

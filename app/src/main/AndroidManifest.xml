@@ -2,15 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.naya12">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
@@ -20,18 +18,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
-
-
-        <activity
-            android:name=".ClientActivity"
-            android:label="@string/title_activity_client"></activity>
-        <activity android:name=".MyUI.MainClientActivity" />
 
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -46,13 +32,30 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <activity
+            android:name=".ClientActivity"
+            android:label="@string/title_activity_client" />
+        <activity android:name=".MyUI.MainClientActivity" />
+        <activity
             android:name=".MyUI.MainMapsActivity"
             android:label="@string/title_activity_main_maps" />
         <activity android:name=".MyUI.AddClientActivity" />
         <activity android:name=".MyUI.ItemActivity" />
         <activity android:name=".MyUI.ProfileActivity" />
         <activity android:name=".MyUI.AdvertiseActivity" />
-        <activity android:name=".MyUI.SignInActivity" >
+        <activity android:name=".MyUI.SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
